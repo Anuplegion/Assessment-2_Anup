@@ -2,32 +2,19 @@
 /**
  * Write a description of class MainMenu here.
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author Anup Adhikari
  */
+import java.util.Scanner;
 public class MainMenu
 {
-    // instance variables - replace the example below with your own
-    private int x;
-
-    /**
-     * Constructor for objects of class MainMenu
-     */
-    public MainMenu()
-    {
-        // initialise instance variables
-        x = 0;
-    }
-
-    /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
-    }
+   public static void main(String[] args){
+       Scanner scanner = new Scanner(System.in);
+        StudentFile studentFile = new StudentFile();
+        
+        System.out.print("Enter the file path: ");
+        String filePath = scanner.nextLine();
+        studentFile.readFromFile(filePath);
+        
+        Unit unit = new Unit(studentFile.getUnitName(), studentFile.getStudents());
+   }
 }
