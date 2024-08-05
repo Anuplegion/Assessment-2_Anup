@@ -1,0 +1,9 @@
+Planning for the student management system
+
+Step 1. Create classes and main method
+	Classes : 
+1.Student Class - Stores student information as an object and initialises all properties also calculates sum of marks for each student
+2.StudentFile Class - read the csv file, parse string as double(marks maybe set as string in csv) also get the unit from the file.
+3. Unit Class - saves unit name and list of students in unit, also used to print student wise marks and other required printing
+4. Main class - main menu that provides interface for user interaction. 
+
