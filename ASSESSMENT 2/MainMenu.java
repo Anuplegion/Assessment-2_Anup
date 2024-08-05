@@ -14,7 +14,5 @@ public class MainMenu
         System.out.print("Enter the file path: ");
         String filePath = scanner.nextLine();
         studentFile.readFromFile(filePath);
-        
-        Unit unit = new Unit(studentFile.getUnitName(), studentFile.getStudents());
-   }
+    }
 }
