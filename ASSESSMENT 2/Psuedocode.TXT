@@ -7,3 +7,27 @@ Step 1. Create classes and main method
 3. Unit Class - saves unit name and list of students in unit, also used to print student wise marks and other required printing
 4. Main class - main menu that provides interface for user interaction. 
 
+
+Psuedocode for Student Class:
+
+Class Student 
+Properties : lastName, firstName, studentID, a1, a2, a3, totalMark
+Constructors for all variables
+Return total mark
+
+Psuedocode for studentFile Class
+Properties : List all student objects, make unit object
+Initialise all students to empty list, initialise unit as a new unit
+Readfile and parse data and also populate the student list with names
+Give error if some error is faced.
+
+Psuedocode for unit Class
+
+Variables : name as string and students the list of students
+Methods to set name, set student list and print student wise marks, print marks under threshold, print top and bottom students, also print all student details
+
+Main class:
+Provide interface for user to get the result they require.
+
+
+S
