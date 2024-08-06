@@ -47,6 +47,7 @@ public class Main
                 String fileName = scanner.nextLine(); //Read the file name entered above and store in fileName
                 //Call loadfile method with fileName passed as argument.
                 studentMarksManager.LoadFile(fileName);
+                break;
                 case 2: //Option to calculate total marks
                 studentMarksManager.calculateTotalMarks();
                 break;
