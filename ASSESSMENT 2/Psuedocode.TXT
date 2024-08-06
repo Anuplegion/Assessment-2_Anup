@@ -26,7 +26,16 @@ Provide interface for user to get the result they require.
 
 
 Bubble Sort Algorithm:
+Take Input: studentList
+//determine the number of student in list and set as n
+Initialize n as size of studentList
 
+Outer loop:  For i from 0 to n-2:  //runs from first to second last element to make sure all elements are compared
+   Inner Loop For j from 0 to n-i-2: //this loop actually compares and swaps elements so that each iteration the element number to be sorted decreases
+        If studentList[j].getTotalMark() > studentList[j+1].getTotalMark(): //compare current student mark with next 
+            Swap studentList[j] and studentList[j+1] //if current mark > next mark, it is swapped 
+
+in end of each iteration, 1 number is put on the right most and by end of all loop, whole list is sorted.
 
 Algorithm 3:print the list of students with total marks less than a certain threshold, take threshold from input
 
