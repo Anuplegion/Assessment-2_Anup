@@ -51,7 +51,7 @@ public class Main
                 studentMarksManager.calculateTotalMarks();
                 break;
                 case 3: //Option to print top and bottom students
-                
+                studentMarksManager.topandbottomStudentMarks(); //call topand bottom method
                 break;
                 case 4: //Option to print students below a certain threshold
                     System.out.print("enter the threshold: "); //user enters threshold
