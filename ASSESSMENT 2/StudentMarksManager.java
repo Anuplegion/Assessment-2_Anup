@@ -70,8 +70,11 @@ public class StudentMarksManager {
     public void calculateTotalMarks(){
         System.out.println("Calculating total marks of students."); //To show program is running
         for (Student student : students) { // Iterate over each student in the list
-            System.out.println("Student Name: " + student.firstName + " " + student.lastName);
+            System.out.println("Student Name: " + student.getName());
             System.out.println("Student ID: " + student.studentID);
+            System.out.println("\t Mark 1: " + student.getMark1()); // print mark 1 
+            System.out.println("\t Mark 2: " + student.getMark2()); // print amrk 2
+            System.out.println("\t Mark 3: " + student.getMark3()); // print mark 3
             System.out.println("Total Mark: " + student.getTotalMark()); // Print total marks for the student
             System.out.println();
         }
@@ -96,8 +99,11 @@ public class StudentMarksManager {
         System.out.println("Printing students with total marks below the threshold: " + threshold);
         for (Student student : students) { // Iterate over each student in the list
             if (student.getTotalMark() < threshold) { // Check if the student's total mark is below the threshold
-                System.out.println("Student Name: " + student.firstName + " " + student.lastName);
+                System.out.println("Student Name: " + student.getName());
                 System.out.println("Student ID: " + student.studentID);
+                System.out.println("\t Mark 1: " + student.getMark1()); // print mark 1 
+                System.out.println("\t Mark 2: " + student.getMark2()); // print amrk 2
+                System.out.println("\t Mark 3: " + student.getMark3()); // print mark 3
                 System.out.println("Total Mark: " + student.getTotalMark()); // Print details for students below the threshold
                 System.out.println();
             }
