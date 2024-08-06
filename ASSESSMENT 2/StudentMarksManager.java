@@ -77,6 +77,7 @@ public class StudentMarksManager {
             System.out.println("\t Mark 3: " + student.getMark3()); // print mark 3
             System.out.println("Total Mark: " + student.getTotalMark()); // Print total marks for the student
             System.out.println();
+            System.out.println("--------------------------------"); //separator fo
         }
     }
     
@@ -106,6 +107,7 @@ public class StudentMarksManager {
                 System.out.println("\t Mark 3: " + student.getMark3()); // print mark 3
                 System.out.println("Total Mark: " + student.getTotalMark()); // Print details for students below the threshold
                 System.out.println();
+                System.out.println("--------------------------------"); //separator fo
             }
         }
     }
