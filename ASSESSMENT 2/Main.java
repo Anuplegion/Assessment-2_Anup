@@ -1,6 +1,6 @@
 
 /**
- * Write a description of class MainMenu here.
+ * Write a description of class Main here.
  *
  * @author Anup Adhikari
  */

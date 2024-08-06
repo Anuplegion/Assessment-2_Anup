@@ -20,12 +20,12 @@ public class StudentMarksManager {
             FileReader fileReader = new FileReader(fileName); // Create FileReader for the specified file
             BufferedReader bufferedReader = new BufferedReader(fileReader); // Wrap FileReader in BufferedReader
 
+            // Let user know file is read
+            System.out.println("File is read successfully");
+            
             // Read the first two lines of the file
             String unitName = bufferedReader.readLine(); // Read the unit name
             bufferedReader.readLine(); // Read and ignore the header line
-
-            // Print the Unit Name (after removing "Unit Name: ")
-            System.out.println("Unit Name: " + unitName.substring(6)); 
             
              // Process each line of the file
             String line;
@@ -49,6 +49,7 @@ public class StudentMarksManager {
                     students.add(student);
         }
     }
+     bufferedReader.close(); // Close the BufferedReader
 }
         catch(IOException e){
             //Catch block to handle any errors that occurs with file importing.
@@ -112,9 +113,9 @@ public class StudentMarksManager {
         for (int i = 0; i < 5; i++) {  // Loop through the code 5 times
             Student student = students.get(students.size() - i - 1);// Get the student from the end of the list (highest total marks) based on the current index
             System.out.printf("\t %d: %s\n", (i + 1), student.getName()); //print rank (i + 1) and student name
-            System.out.println("\t Mark1: " + student.getMark1()); // print mark 1 
-            System.out.println("\t Mark2: " + student.getMark2()); // print amrk 2
-            System.out.println("\t Mark3: " + student.getMark3()); // print mark 3
+            System.out.println("\t Mark 1: " + student.getMark1()); // print mark 1 
+            System.out.println("\t Mark 2: " + student.getMark2()); // print amrk 2
+            System.out.println("\t Mark 3: " + student.getMark3()); // print mark 3
             System.out.println("\t Total Mark: " + student.getTotalMark()); // print total mark
             System.out.println("--------------------------------"); //separator for space between results
     }
@@ -123,9 +124,9 @@ public class StudentMarksManager {
         for (int i = 0; i < 5; i++) { //loop 5 times
             Student student = students.get(i); // Get the student from the beginning of the list (lowest total marks) based on the current index
             System.out.printf("\t %d: %s\n", (i + 1), student.getName()); //print rank (i + 1) and student name
-            System.out.println("\t Mark1: " + student.getMark1()); // print mark 1 
-            System.out.println("\t Mark2: " + student.getMark2()); // print amrk 2
-            System.out.println("\t Mark3: " + student.getMark3()); // print mark 3
+            System.out.println("\t Mark 1: " + student.getMark1()); // print mark 1 
+            System.out.println("\t Mark 2: " + student.getMark2()); // print amrk 2
+            System.out.println("\t Mark 3: " + student.getMark3()); // print mark 3
             System.out.println("\t Total Mark: " + student.getTotalMark()); // print total mark
             System.out.println("--------------------------------"); //Separator for space between numbers
         }     
