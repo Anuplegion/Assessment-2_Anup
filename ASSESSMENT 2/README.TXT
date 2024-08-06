@@ -6,7 +6,7 @@ all they need to know. The comments should usually include at least:
 
 PROJECT TITLE: ANUP'S ASSESSMENT 2
 PURPOSE OF PROJECT: Masters of INformation Technology assessment
-VERSION or DATE:
-HOW TO START THIS PROJECT:
-AUTHORS:
-USER INSTRUCTIONS:
+VERSION or DATE: 6 August 2024
+HOW TO START THIS PROJECT: Import everything, make sure datatouse.csv is in the same folder as rest of the code. Run the main class
+AUTHORS: Anup Adhikari
+
