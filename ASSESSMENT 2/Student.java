@@ -22,4 +22,22 @@ public class Student{
     public double getTotalMark(){
         return totalMark;
     }
+    
+    //getter for Name
+    public String getName(){
+        return firstName + " " + lastName;
+    }
+    
+    // Getter for individual marks
+    public double getMark1() {
+    return mark1;
+    }
+
+    public double getMark2() {
+        return mark2;
+    }
+
+    public double getMark3() {
+        return mark3;
+    }
 }

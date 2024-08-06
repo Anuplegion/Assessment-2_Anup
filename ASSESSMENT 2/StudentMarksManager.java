@@ -112,8 +112,28 @@ public class StudentMarksManager {
         bubbleSort(students);
         
         //Get top 5 students
-        
+        System.out.println("Students with highest marks: ");
+        for (int i = 0; i < Math.min(5, students.size()); i++) {  // Loop through the top 5 students or fewer if there are less than 5 students
+            Student student = students.get(students.size() - i - 1);// Get the student from the end of the list (highest total marks) based on the current index
+            System.out.printf("\t %d: %s\n", (i + 1), student.getName()); //print rank (i + 1) and student name
+            System.out.println("\t Mark1: " + student.getMark1()); // print mark 1 
+            System.out.println("\t Mark2: " + student.getMark2()); // print amrk 2
+            System.out.println("\t Mark3: " + student.getMark3()); // print mark 3
+            System.out.println("\t Total Mark: " + student.getTotalMark()); // print total mark
+            System.out.println("--------------------------------"); //separator for space between results
     }
+     //Get Bottom 5 students
+     System.out.println("Students with lowest marks: ");
+        for (int i = 0; i < Math.min(5, students.size()); i++) {
+            Student student = students.get(i); // Get the student from the beginning of the list (lowest total marks) based on the current index
+            System.out.printf("\t %d: %s\n", (i + 1), student.getName()); //print rank (i + 1) and student name
+            System.out.println("\t Mark1: " + student.getMark1()); // print mark 1 
+            System.out.println("\t Mark2: " + student.getMark2()); // print amrk 2
+            System.out.println("\t Mark3: " + student.getMark3()); // print mark 3
+            System.out.println("\t Total Mark: " + student.getTotalMark()); // print total mark
+            System.out.println("--------------------------------"); //Separator for space between numbers
+        }     
+}
     
     // Helper method to print a list of students
     private void printStudents(List<Student> studentsList) {

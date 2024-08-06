@@ -23,7 +23,7 @@ Main class:
 Provide interface for user to get the result they require.
 
 
-
+-----------------------
 
 Bubble Sort Algorithm:
 Take Input: studentList
@@ -37,6 +37,7 @@ Outer loop:  For i from 0 to n-2:  //runs from first to second last element to m
 
 in end of each iteration, 1 number is put on the right most and by end of all loop, whole list is sorted.
 
+-------------------------
 
 Algorithm 3:print the list of students with total marks less than a certain threshold, take threshold from input
 
@@ -52,12 +53,24 @@ For each student in students:
 For each student in studentsBelowThreshold:
     Print student.firstName, student.lastName, student.studentID, student.getTotalMark()
 
-
-
+-------------------------------
 
 Algorithm 4: print the top 5 students with the highest total marks and the top 5 students with the lowest total marks
 
+Take Input: studentList
 
+Initialize topStudents as an empty list
+Initialize bottomStudents as an empty list
+
+Call bubbleSort(studentList) to sort the students by total marks in ascending order
+
+// Get top 5 students
+For i from size(studentList) - 1 to max(size(studentList) - 5, 0):
+    Add studentList[i] to topStudents
+
+// Get bottom 5 students
+For i from 0 to min(5, size(studentList)) - 1:
+    Add studentList[i] to bottomStudents
 
 
 
