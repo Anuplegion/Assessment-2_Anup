@@ -14,13 +14,13 @@ public class Main
         StudentMarksManager studentMarksManager = new StudentMarksManager(); // Create an instance of StudentMarksManager
         
         while(true){ //infinite loop for the menu until user hits exit
-            //Display menu options
+            //Display menu optionss
             System.out.println("Menu");
-            System.out.println("(1) Read from file");
-            System.out.println("(2) Calculate total marks");
-            System.out.println("(3) Print top and bottom students");
-            System.out.println("(4) Print students below threshold");
-            System.out.println("(5) Exit");
+            System.out.println("\t (1) Read from file");
+            System.out.println("\t (2) Calculate total marks");
+            System.out.println("\t (3) Print top and bottom students");
+            System.out.println("\t (4) Print students below threshold");
+            System.out.println("\t (5) Exit");
             System.out.println("Enter your choice (1-5): ");
             int choice = 0; //initlize choice as 0 before getting input
             
