@@ -16,12 +16,44 @@ public class StudentMarksManager{
     //Method takes filename as argument and passes it to get the file.
     public void LoadFile(String fileName){
         try{
+            FileReader fileReader = new FileReader(fileName); // Create FileReader for the specified file
+            BufferedReader bufferedReader = new BufferedReader(fileReader); // Wrap FileReader in BufferedReader
+
+            // Read the first two lines of the file
+            String unitName = bufferedReader.readLine(); // Read the unit name
+            bufferedReader.readLine(); // Read and ignore the header line
+
+            // Print the Unit Name (after removing "Unit Name: ")
+            System.out.println("Unit Name: " + unitName.substring(6)); 
             
+             // Process each line of the file
+            String line;
+            while ((line = bufferedReader.readLine()) != null) { // Read until end of file
+                if (line.trim().startsWith("#")) { // Skip lines that start with '#'
+                    continue; // Skip to the next line so it skips 2 lines in total
+                }
+
+                String[] data = line.split(","); // Split the line into an array by comma
+                if (data.length >= 6) { // Ensure the array has the correct number of elements
+                    String lastName = data[0].trim(); // Extract last name and trim any extra spaces
+                    String firstName = data[1].trim(); // Extract first name and trim any extra spaces
+                    String studentID = data[2].trim(); // Extract student ID and trim any extra spaces
+                    
+                    //Parse marks from strings, set default value 0.0 if there is no marks or parsing fails
+                    double mark1 = parseDoublewithDefault(data[3].trim(), 0.0);
+                    double mark2 = parseDoubleWithDefault(data[4].trim(), 0.0);
+                    double mark3 = parseDoubleWithDefault(data[5].trim(), 0.0);
+                     // Create a new student object and add it to the list
+                    Student student = new Student(lastName, firstName, studentID, mark1, mark2, mark3);
+                    students.add(student);
         }
+    }
+}
         catch(IOException e){
             //Catch block to handle any errors that occurs with file importing.
             System.out.println("Error reading the file: " + e.getMessage()); // Print the error into message.
         }
     }
     }
+
 
