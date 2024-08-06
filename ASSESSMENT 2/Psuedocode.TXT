@@ -59,18 +59,19 @@ Algorithm 4: print the top 5 students with the highest total marks and the top 5
 
 Take Input: studentList
 
-Initialize topStudents as an empty list
-Initialize bottomStudents as an empty list
-
 Call bubbleSort(studentList) to sort the students by total marks in ascending order
 
 // Get top 5 students
-For i from size(studentList) - 1 to max(size(studentList) - 5, 0):
-    Add studentList[i] to topStudents
+For i from 0 to 5:
+    Select 5 students from end of the list 
+	print name, mark1, mark2, mark3 and total mark of each student
 
 // Get bottom 5 students
-For i from 0 to min(5, size(studentList)) - 1:
-    Add studentList[i] to bottomStudents
+For i from 0 to 5:
+    Select 5 students from top of the list 
+	print name, mark1, mark2, mark3 and total mark of each student
+
+
 
 
 

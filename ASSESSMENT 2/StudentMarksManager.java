@@ -109,7 +109,7 @@ public class StudentMarksManager {
         
         //Get top 5 students
         System.out.println("Students with highest marks: ");
-        for (int i = 0; i < Math.min(5, students.size()); i++) {  // Loop through the top 5 students or fewer if there are less than 5 students
+        for (int i = 0; i < 5; i++) {  // Loop through the code 5 times
             Student student = students.get(students.size() - i - 1);// Get the student from the end of the list (highest total marks) based on the current index
             System.out.printf("\t %d: %s\n", (i + 1), student.getName()); //print rank (i + 1) and student name
             System.out.println("\t Mark1: " + student.getMark1()); // print mark 1 
@@ -120,7 +120,7 @@ public class StudentMarksManager {
     }
      //Get Bottom 5 students
      System.out.println("Students with lowest marks: ");
-        for (int i = 0; i < Math.min(5, students.size()); i++) {
+        for (int i = 0; i < 5; i++) { //loop 5 times
             Student student = students.get(i); // Get the student from the beginning of the list (lowest total marks) based on the current index
             System.out.printf("\t %d: %s\n", (i + 1), student.getName()); //print rank (i + 1) and student name
             System.out.println("\t Mark1: " + student.getMark1()); // print mark 1 
