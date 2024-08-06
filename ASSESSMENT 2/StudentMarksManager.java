@@ -77,8 +77,8 @@ public class StudentMarksManager {
             System.out.println("\t Mark 3: " + student.getMark3()); // print mark 3
             System.out.println("Total Mark: " + student.getTotalMark()); // Print total marks for the student
             System.out.println();
-            System.out.println("--------------------------------"); //separator fo
-        }
+            }
+         System.out.println("--------------------------------"); 
     }
     
     //Method to sort list by using Bubble Sort
@@ -107,9 +107,10 @@ public class StudentMarksManager {
                 System.out.println("\t Mark 3: " + student.getMark3()); // print mark 3
                 System.out.println("Total Mark: " + student.getTotalMark()); // Print details for students below the threshold
                 System.out.println();
-                System.out.println("--------------------------------"); //separator fo
+               
             }
         }
+         System.out.println("--------------------------------"); 
     }
     //Method to print top 5 and bottom 5 students based on total marks
     public void topandbottomStudentMarks(){
@@ -125,8 +126,9 @@ public class StudentMarksManager {
             System.out.println("\t Mark 2: " + student.getMark2()); // print amrk 2
             System.out.println("\t Mark 3: " + student.getMark3()); // print mark 3
             System.out.println("\t Total Mark: " + student.getTotalMark()); // print total mark
-            System.out.println("--------------------------------"); //separator for space between results
+            System.out.println();
     }
+      System.out.println("--------------------------------"); //separator for space between results
      //Get Bottom 5 students
      System.out.println("Students with lowest marks: ");
         for (int i = 0; i < 5; i++) { //loop 5 times
@@ -136,8 +138,9 @@ public class StudentMarksManager {
             System.out.println("\t Mark 2: " + student.getMark2()); // print amrk 2
             System.out.println("\t Mark 3: " + student.getMark3()); // print mark 3
             System.out.println("\t Total Mark: " + student.getTotalMark()); // print total mark
-            System.out.println("--------------------------------"); //Separator for space between numbers
-        }     
+            System.out.println();
+        }   
+         System.out.println("--------------------------------"); //separator for space between results
 }
     
     
