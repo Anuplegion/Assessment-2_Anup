@@ -77,8 +77,18 @@ public class StudentMarksManager {
     }
     
     //Method to sort list by using Bubble Sort
-    private void bubbleSort(){
-        
+    private void bubbleSort(List<Student> studentList){
+         int n = studentList.size(); // Get the size of the list
+        for (int i = 0; i < n - 1; i++) { // Outer loop for Bubble Sort
+            for (int j = 0; j < n - i - 1; j++) { // Inner loop for comparing adjacent elements
+                if (studentList.get(j).getTotalMark() > studentList.get(j + 1).getTotalMark()) { // Compare total marks
+                    // Swap the elements if they are in the wrong order
+                    Student temp = studentList.get(j);
+                    studentList.set(j, studentList.get(j + 1));
+                    studentList.set(j + 1, temp);
+                }
+            }
+        }
     }
     // Method to print students whose total marks are below a certain threshold
     public void studentsMarksThreshold(double threshold) {
