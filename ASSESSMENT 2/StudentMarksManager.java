@@ -16,6 +16,7 @@ public class StudentMarksManager{
     //Method takes filename as argument and passes it to get the file.
     public void LoadFile(String fileName){
         try{
+            //Open and read the data from file
             FileReader fileReader = new FileReader(fileName); // Create FileReader for the specified file
             BufferedReader bufferedReader = new BufferedReader(fileReader); // Wrap FileReader in BufferedReader
 
@@ -40,7 +41,7 @@ public class StudentMarksManager{
                     String studentID = data[2].trim(); // Extract student ID and trim any extra spaces
                     
                     //Parse marks from strings, set default value 0.0 if there is no marks or parsing fails
-                    double mark1 = parseDoublewithDefault(data[3].trim(), 0.0);
+                    double mark1 = parseDoubleWithDefault(data[3].trim(), 0.0);
                     double mark2 = parseDoubleWithDefault(data[4].trim(), 0.0);
                     double mark3 = parseDoubleWithDefault(data[5].trim(), 0.0);
                      // Create a new student object and add it to the list
@@ -54,6 +55,18 @@ public class StudentMarksManager{
             System.out.println("Error reading the file: " + e.getMessage()); // Print the error into message.
         }
     }
+    
+    //creating parseDoublewithDefault method to make sure empty spaces are handled with 0.0 value.
+    private double parseDoubleWithDefault(String str, double defaultValue) {
+        try {
+            return Double.parseDouble(str); // Attempt to parse the string as a double
+        } catch (NumberFormatException e) { // Handle NumberFormatException if parsing fails
+            return defaultValue; // Return the default value if parsing fails
+        }
+    }
+
+    //Method to calculate and print total marks for each student
+    
     }
 
 
