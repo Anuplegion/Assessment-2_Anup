@@ -1,7 +1,7 @@
 public class Student{
-    private String lastName;
-    private String firstName;
-    private String studentID;
+    public String lastName;
+    public String firstName;
+    public String studentID;
     private double mark1;
     private double mark2;
     private double mark3;

@@ -102,6 +102,28 @@ public class StudentMarksManager {
             }
         }
     }
+    //Method to print top 5 and bottom 5 students based on total marks
+    public void topandbottomStudentMarks(){
+        //initalize empty lists
+        List<Student> topStudents = new ArrayList<>(); // List to store top 5 students
+        List<Student> bottomStudents = new ArrayList<>(); // List to store bottom 5 students
+
+        //Sort all students by using bubble sort
+        bubbleSort(students);
+        
+        //Get top 5 students
+        
+    }
+    
+    // Helper method to print a list of students
+    private void printStudents(List<Student> studentsList) {
+        for (Student student : studentsList) { // Iterate over each student in the list
+            System.out.println("Student Name: " + student.firstName + " " + student.lastName);
+            System.out.println("Student ID: " + student.studentID);
+            System.out.println("Total Mark: " + student.getTotalMark()); // Print student details
+            System.out.println();
+        }
+    }
     
 }
 
