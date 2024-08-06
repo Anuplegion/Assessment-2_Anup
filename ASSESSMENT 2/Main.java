@@ -5,6 +5,7 @@
  * @author Anup Adhikari
  */
 import java.util.Scanner;
+import java.util.InputMismatchException;
 
 public class Main
 {
@@ -21,8 +22,23 @@ public class Main
             System.out.println("(4) Print students below threshold");
             System.out.println("(5) Exit");
             System.out.println("Enter your choice (1-5): ");
-            int choice = scanner.nextInt(); //gives user enter option and takes nuber into choice.
+            int choice = 0; //initlize choice as 0 before getting input
             
+            
+            //Input validation to give error if user inputs strings instead of 1-5
+            boolean validInput = false; // Initialize Flag to check if input is valid
+            
+            while (!validInput) { // Loop until valid input is provided
+                try {
+                    choice = scanner.nextInt(); // Read the choice
+                    validInput = true; // Set flag to true if input is valid and proceed
+                } catch (InputMismatchException e) { // Catch exception if input is not an integer
+                    System.out.println("Invalid input. Please enter a number between 1 and 5.");
+                    scanner.next(); // Clear the invalid input
+                }
+            }
+            
+            //Process choice from the user
             switch(choice){
                 case 1: //Option to read file
                 scanner.nextLine(); 
