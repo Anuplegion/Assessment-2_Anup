@@ -37,13 +37,18 @@ Outer loop:  For i from 0 to n-2:  //runs from first to second last element to m
 
 in end of each iteration, 1 number is put on the right most and by end of all loop, whole list is sorted.
 
+
 Algorithm 3:print the list of students with total marks less than a certain threshold, take threshold from input
 
 Take Input: threshold
 Initialize studentsBelowThreshold as empty list
 For each student in students:
-    If student.getTotalMark() < threshold:
+    If student.getTotalMark() < threshold: //compares each student total mark with threshold mark 
+	//if student got greater than threshold, ignore
+
+	//else
         Add student to studentsBelowThreshold
+	//once whole loop ends	
 For each student in studentsBelowThreshold:
     Print student.firstName, student.lastName, student.studentID, student.getTotalMark()
 
