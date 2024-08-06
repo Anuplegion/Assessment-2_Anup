@@ -5,7 +5,7 @@ import java.io.IOException; // Import IOException for handling file reading erro
 import java.util.List; //Import List for handling Lists
 import java.util.ArrayList; //Import Arraylist for dynamic array functionality possibility
 
-public class StudentMarksManager{
+public class StudentMarksManager {
     private List<Student> students; // Initialize list that stores all student objects
     
     public StudentMarksManager(){
@@ -66,7 +66,33 @@ public class StudentMarksManager{
     }
 
     //Method to calculate and print total marks for each student
-    
+    public void calculateTotalMarks(){
+        System.out.println("Calculating total marks of students."); //To show program is running
+        for (Student student : students) { // Iterate over each student in the list
+            System.out.println("Student Name: " + student.firstName + " " + student.lastName);
+            System.out.println("Student ID: " + student.studentID);
+            System.out.println("Total Mark: " + student.getTotalMark()); // Print total marks for the student
+            System.out.println();
+        }
     }
+    
+    //Method to sort list by using Bubble Sort
+    private void bubbleSort(){
+        
+    }
+    // Method to print students whose total marks are below a certain threshold
+    public void studentsMarksThreshold(double threshold) {
+        System.out.println("Printing students with total marks below the threshold: " + threshold);
+        for (Student student : students) { // Iterate over each student in the list
+            if (student.getTotalMark() < threshold) { // Check if the student's total mark is below the threshold
+                System.out.println("Student Name: " + student.firstName + " " + student.lastName);
+                System.out.println("Student ID: " + student.studentID);
+                System.out.println("Total Mark: " + student.getTotalMark()); // Print details for students below the threshold
+                System.out.println();
+            }
+        }
+    }
+    
+}
 
 

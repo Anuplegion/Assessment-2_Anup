@@ -3,7 +3,7 @@ Planning for the student management system
 Step 1. Create classes and main method
 	Classes : 
 1.Student Class - Stores student information as an object and initialises all properties also calculates sum of marks for each student
-2.StudentMarksManager Class - read the csv file, parse string as double(marks maybe set as string in csv) also get the unit from the file.
+2.StudentMarksManager Class - read the csv file, parse string as double(marks maybe set as string in csv) also get the unit from the file. And house all calculation methods
 3. Main class - main menu that provides interface for user interaction. 
 
 
@@ -25,12 +25,24 @@ Provide interface for user to get the result they require.
 
 
 
+Bubble Sort Algorithm:
+
+
 Algorithm 3:print the list of students with total marks less than a certain threshold, take threshold from input
+
+Take Input: threshold
+Initialize studentsBelowThreshold as empty list
+For each student in students:
+    If student.getTotalMark() < threshold:
+        Add student to studentsBelowThreshold
+For each student in studentsBelowThreshold:
+    Print student.firstName, student.lastName, student.studentID, student.getTotalMark()
 
 
 
 
 Algorithm 4: print the top 5 students with the highest total marks and the top 5 students with the lowest total marks
+
 
 
 
