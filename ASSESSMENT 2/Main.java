@@ -15,7 +15,7 @@ public class Main
         
         while(true){ //infinite loop for the menu until user hits exit
             //Display menu optionss
-            System.out.println("Menu");
+            System.out.println("Welcome to Student Manager Program Menu");
             System.out.println("\t (1) Read from file");
             System.out.println("\t (2) Calculate total marks");
             System.out.println("\t (3) Print top and bottom students");
